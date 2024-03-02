@@ -5,12 +5,12 @@ import nodemailer from "nodemailer"
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: "deomanisha6398@gmail.com",
-      pass: "jhrmdofdxjivxjay",
+      user: process.env.USER,
+      pass: process.env.PASS,
     }
   })
   var mailOptions = {
-    from: 'jkstar0123@gmail.com',
+    from: 'deomanisha6398@gmail.com',
     to: `${email}`,
     subject: 'Food Cart Order',
     html:`<html>
